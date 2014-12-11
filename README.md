@@ -2,6 +2,7 @@ PETOOH_translator
 =================
 
 How to use thi programm:
+
 1. Run it with 1 parameter in console, for example:
 kukarek "kud-Kudah"
 
