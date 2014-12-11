@@ -228,3 +228,9 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.txt
+*.exe
+*.vcxproj
+*.sln
+*.filters
+*.py
