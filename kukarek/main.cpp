@@ -17,20 +17,43 @@ void pokpok(int Kudah, ostream& kukarek)
 	}
 }
 
+void Kudaah(int pok, int pokpok, ostream& kukarek)
+{
+	string ko;
+	int Kud_kudah = 0;
+	if(pok < pokpok)
+	{
+		ko = "Ko";
+		Kud_kudah = pokpok - pok;
+	}
+	else
+	{
+		ko = "kO";
+		Kud_kudah = pok - pokpok;
+	}
+	for(int Kukarek= 0; Kukarek< Kud_kudah; ++Kukarek)
+		kukarek << ko;
+	kukarek << " Kukarek\n";
+
+}
+
 void kudah(istream&Ko, ostream& kO)
 {
-	char c;
+	char c = 0;
+	char c0 = 0;
 	while (Ko && kO)
 	{
+		c0 = c;
 		Ko >> c;
 		if(Ko.good())
 		{
-			pokpok(c, kO);
+			Kudaah(c0, c, kO);
 		}
 		else
 		{
-			pokpok(13, kO);
-			pokpok(10, kO);
+			
+			Kudaah(c, 13, kO);
+			Kudaah(13, 10, kO);
 		}
 	}
 }
@@ -44,7 +67,7 @@ int main(int argc, char* argv[])
 		cout << argv[1] << '\n';
 	}
 	else
-		pok = "Kud-kudah\n";
+		pok = "Kud_kudah\n";
 	ofstream pokpokpok("KoKoKo.txt");
 	stringstream Kukarek(pok);
 	kudah(Kukarek, pokpokpok);
